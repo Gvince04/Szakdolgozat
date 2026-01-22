@@ -1,0 +1,24 @@
+Adat összefűzési módszerek embeddinghez
+
+1. Minden fájl(forrás/ modalitás) külön embeddelése a) majd átlagolás Ez akkor lenne hasznos, hogyha 
+	minden mérési forrás ugyan olyan értékeket mérne, pl, mind gyroszkóp/gsr/ekg, és mindegyiknek 
+	ha nem is pontosan, de hasonlóan fontosak lennének az értékeik szempontjából.
+		Előnyei: - Egyszerű és effektív, amennyiben szemantikailag megegyeznek az adat 
+		források. - Alacsony dimenzió szám (MOMENT esetében 1024). - Jól működik, ha fontos a 
+		globális reprezentáció. Hátrányok: - Feltételezi, hogy minden modalitás (forrás) 
+		egyenlően fontos. - Elveszíti az információkat a különböző modalitásokra. - Elmossa a 
+		jeleket, ha az idősorok hossza és szemantikája nagyban eltér.
+	
+	b) majd összefűzés Itt az embeddelés után csak össze lennének fűzve az embeddingek, aminek 
+	hatására kapnánk egy 1024 * (fájlok száma) hosszú embeddinget. Ami azért lenne előnyös, mert 
+	minden modalitás ábrázolva lenne, viszont kapnénk egy elég hosszú embeddinget.
+		Előnyök: - Megtartja az összes modalitás reprezentációját. - Később az osztályok ki 
+		tudják találni, hogy mely értékekre kell odafigyelni. Hátrányok: - Magas 
+		dimenzionalitás. - Több számítás és tárhely.
+
+2. Adatok összefűzése egy nagy tárolóba Ebben az esetben az adatokat össze kell először fűzni, egy 
+N*M-es tárolóba (emihez paddinget, vagy upsamplinget kell használni), amire a MOMENT tudna egy 
+egységes embeddinget megadni. Előnyök: - Megtartja az adatok struktúráját. - Megengedi, hogy az adatok 
+a z előfeldolgozás elején össze legyenek fűzve. - Könnyű kompatibilitás az utólagos osztályozóval. 
+Hátrányok: - A pedding bevezethet zajt vagy kiegyensúlyozatlanságot. - Az upsampling elnyomhat 
+adatstruktúrákat. - Figyelni kell, hogy a mesterséges adatok ne vezessenek be disztorziót.
