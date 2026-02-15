@@ -1,0 +1,37 @@
+[
+  {
+    "flag": "--input_dir",
+    "name": "Input Directory",
+    "type": "directory",
+    "default": "../zengo_recording",
+    "tip": "Path to the root directory containing raw CSV files."
+  },
+  {
+    "flag": "--output_dir",
+    "name": "Output Directory",
+    "type": "directory",
+    "default": "../zengo_preprocessed",
+    "tip": "Path to the root directory where .npy files will be saved."
+  },
+  {
+    "flag": "--target_length",
+    "name": "Target Length",
+    "type": "number",
+    "default": 2000,
+    "tip": "The fixed length to resize the time series to."
+  },
+  {
+    "flag": "--target_filename",
+    "name": "Target Filename",
+    "type": "text",
+    "default": "headset.csv",
+    "tip": "The specific CSV filename to search for."
+  },
+  {
+    "flag": "--overwrite",
+    "name": "Overwrite Files",
+    "type": "checkbox",
+    "default": false,
+    "tip": "If checked, existing .npy files will be overwritten."
+  }
+]
