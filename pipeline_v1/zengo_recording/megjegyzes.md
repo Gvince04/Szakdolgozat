@@ -1,0 +1,1 @@
+Ezt a mappát azok a fájlok használják, amelyek a nyers adatokkal dolgoznak (data_augment.ipynb, data_concat_with_interpolation.ipynb, data_selection.ipynb). A kódok futtatásához szükséges a felvételek letöltése a VM-ről, amelyek az alábbi útvonalon találhatóak: /home/shared/zengo_dataset/full/*.
