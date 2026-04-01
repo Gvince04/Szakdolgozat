@@ -1,0 +1,39 @@
+[
+  {
+    "flag": "--input_dir",
+    "name": "Input Directory",
+    "type": "directory",
+    "default": "data/zengo_preprocessed",
+    "tip": "Path to the root directory containing preprocessed .npy files.",
+    "hidden": true
+  },
+  {
+    "flag": "--output_dir",
+    "name": "Output Directory",
+    "type": "directory",
+    "default": "data/zengo_embedded",
+    "tip": "Path to the root directory where embeddings will be saved.",
+    "hidden": true
+  },
+  {
+    "flag": "--model_name",
+    "name": "MOMENT Model ID",
+    "type": "string",
+    "default": "AutonLab/MOMENT-1-large",
+    "tip": "HuggingFace model ID to be used for embedding generation."
+  },
+  {
+    "flag": "--chunk_size",
+    "name": "Context Window",
+    "type": "number",
+    "default": 2048,
+    "tip": "Context window size for MOMENT (the number of time steps processed at once)."
+  },
+  {
+    "flag": "--overwrite",
+    "name": "Overwrite Files",
+    "type": "checkbox",
+    "default": false,
+    "tip": "If checked, existing embedding files will be replaced."
+  }
+]
