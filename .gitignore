@@ -1,0 +1,6 @@
+.ipynb_checkpoints
+
+data/records100/*
+data/records500/*
+data/preprocessed/*
+data/embedded/*
