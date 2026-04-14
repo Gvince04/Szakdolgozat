@@ -1,5 +1,7 @@
 .ipynb_checkpoints
 
+.~lock.*
+
 data/records100/*
 data/records500/*
 data/preprocessed/*
