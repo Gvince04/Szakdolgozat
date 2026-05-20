@@ -1,1 +1,0 @@
-Ez a mappa a data_concat_with_interpolation.ipynb futtatása során előállított, előfeldolgozott adatok mentésére szolgál. Az itt található fájlok automatikusan generálódnak a szkript kimeneteként.
